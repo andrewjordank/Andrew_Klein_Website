@@ -1,5 +1,5 @@
-# This is my Website!! #
+# Welcome to my website! #
 
-**I will explain what my website is about.**
+** This website will be updated to fit the needs of Andrew Klein's Graduate career **
 
-If you are reading this then I was successful!
+Please click on the headers above to navigate the site
