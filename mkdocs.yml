@@ -57,10 +57,7 @@ nav:
       Installation and Requirements: installation.md
       User Manual: manual.md
   - Data Management Plan: Data_Management_Plan.md
-  - Current Projects: 
-    Intro: intro.md
-      HIT: hit_project.md
-      ABO: abo_project.md
+  - Current Projects:
 
 # Theme Extras
 extra_css:
