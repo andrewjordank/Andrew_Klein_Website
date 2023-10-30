@@ -14,7 +14,7 @@ copyright: 'Copyright &copy; 2023 - 2024 Andrew Klein'
 
 # Configuration
 theme:
-  name: lantana
+  name: material
   highlightts: true
   font:
     text: Roboto
