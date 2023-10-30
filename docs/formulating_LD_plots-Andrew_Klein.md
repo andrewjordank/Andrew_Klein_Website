@@ -235,10 +235,10 @@ Now he could use them in Plink.
 
 
 <span style="color:darkgreen">
-The input is a vcf file and a txt file. This will only keep the indivduals that are in the txt file. It will then output a new vcf that only contains the individuals of interest.</span>
+The input is a vcf file and a txt file. This will only keep the individuals that are in the txt file. It will then output a new vcf that only contains the individuals of interest.</span>
 <pre> plink1.9 --vcf /Data/home/ajklein/B_Files/B_Snps_chr9_1kgp_high_coverage.vcf --keep /Data/home/ajklein/amr.txt --out B_AMR --make-bed --double-id --recode vcf</pre>
 
-This is an example of how to make one of the population LD plots reflect the color of that population we're choosing for our paper:
+This is an example of how to make one of the population LD plots reflect the color of the population we're choosing for our paper:
 
 <span style="color:darkgreen">
 This will result in a LD plot that has a color gradient that reflects the color of the population</span>
@@ -249,4 +249,7 @@ __This is how Andrew learned Python, command line, LDBlockShow, and Plink to gen
 **Known Issues**<br>
 For one of the O Snps in the EAS population (rs8176704), there is no data so the resulting LD Plot does not include this SNP. <br>
 LD Calculations were compared to the [LD Matrix tool](https://ldlink.nci.nih.gov/?tab=ldmatrix).<br> This also shows the missing data for this SNP within this population.<br>
-The LD calculations between the website and the progam seem to be the same or similar in value.
+The LD calculations between the website and the program seem to be the same or similar in value.
+
+
+(https://github.com/andrewjordank/DSF_Fall2023/blob/main/Images/Floyd.jpg?raw=true)
