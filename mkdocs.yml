@@ -58,7 +58,7 @@ nav:
   - Projects:
       Introduction: intro.md
       ABO Systematic Review: formulating_LD_plots-Andrew_Klein.md
-      Heparin Induced Thrombocytopenia: intro.md
+      Heparin Induced Thrombocytopenia:
   - Codebase: 
       Installation and Requirements: requirements.txt
       User Manual: manual.md
