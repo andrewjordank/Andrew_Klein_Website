@@ -14,7 +14,25 @@ copyright: 'Copyright &copy; 2023 - 2024 Andrew Klein'
 
 # Configuration
 theme:
-  name: material
+  palette: 
+    primary: amber
+    accent: white
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   highlightts: true
   font:
     text: Roboto
@@ -41,7 +59,7 @@ theme:
   # Palette and theme (uses personalized colours)
   language: en
   palette:
-    primary: custom
+    primary: amber
     accent: custom
   icon:
     logo: material/cogs
