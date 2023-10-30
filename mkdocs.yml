@@ -14,10 +14,8 @@ copyright: 'Copyright &copy; 2023 - 2024 Andrew Klein'
 
 # Configuration
 theme:
-  palette: 
-    primary: amber
-    accent: white
-  highlights: true
+  name: material
+  highlighjs: true
   font:
     text: Roboto
     code: Regular
