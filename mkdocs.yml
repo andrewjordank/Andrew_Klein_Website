@@ -58,11 +58,11 @@ nav:
   - Projects:
       Introduction: intro.md
       ABO Systematic Review: formulating_LD_plots-Andrew_Klein.md
-      Heparin Induced Thrombocytopenia:
+      Heparin Induced Thrombocytopenia: filler.md
   - Codebase: 
       Installation and Requirements: requirements.txt
-      User Manual: manual.md
-  - Data Management Plan: Data_Management_Plan.md
+      User Manual: filler.md
+  - Data Management Plan: filler.md
 
 # Theme Extras
 extra_css:
