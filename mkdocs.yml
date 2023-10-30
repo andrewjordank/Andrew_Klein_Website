@@ -54,7 +54,7 @@ nav:
       Personal Info: personal.md
       Resume: Andrew Klein_CV (1).pdf
   - Projects:
-      Introduction: main/docs/Projects/intro.md
+      Introduction: intro.md
   - Codebase: 
       Installation and Requirements: installation.md
       User Manual: manual.md
