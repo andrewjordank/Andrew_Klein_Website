@@ -1,5 +1,7 @@
 # Making a Pairwise LD Plot Using LDBlock Show
 __Andrew Klein__  andrewjklein@arizona.edu
+
+
 Our goal is to create a pairwise LD plot of the SNPs used to determine ABO blood type alleles. These SNPs were identified during a systematic review and include both functional SNPs and tag SNPs. 
 
 The O vs non-O SNPs include:
@@ -89,13 +91,15 @@ __3/14/2023__    __Andrew's First Attempt__
 This was the first time Andrew attempted to use LDBlock Show. This is the code he used:
 
 <span style="color:darkgreen"> Takes a vcf as input, look at a certain region, produces a PNG LD Plot </span>
-<pre> /home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz -OutPut /Data/home/ajklein/LDBlock -Region chr9:133247534-133278152 -OutPng -ShowNum -SeleVar 2 </pre>
+<pre> /home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz
+-OutPut /Data/home/ajklein/LDBlock -Region chr9:133247534-133278152 -OutPng -ShowNum -SeleVar 2 </pre>
 
 He didn't know how to output the graph as a PDF yet but this first attempt showed every SNP in the region that he provied in the code. While this was not even close to what he wanted to do he was able to use the program.\
 He did some more research and added some more arguments to his code:
 
 <span style="color:darkgreen"> Take a vcf and a txt files as input, looks at a certain region, label the snps from the txt document, outputs a LD Plot as a PDF </span>
-<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz -OutPut /Data/home/ajklein/LDBlock_FULL -Region chr9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/O_Snps_Positions.txt -InGFF /Data/home/ajklein/ABOGene.GFF3</pre>
+<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz 
+-OutPut /Data/home/ajklein/LDBlock_FULL -Region chr9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/O_Snps_Positions.txt -InGFF /Data/home/ajklein/ABOGene.GFF3</pre>
 
 Now he was able to output the graphs as a PDF, label the SNPs he was interested in and tried to use a GFF3 file to show exons and label the gene name. But the -InGFF argument was not working for him at this time.
 
@@ -118,7 +122,8 @@ This will tell PLINK what SNPs to extract. He was then able to run this code:
 <span style="color:darkgreen">
 Creates a new VCF file that only contains the O SNPs
     </span>
-<pre>plink1.9 --vcf /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz --extract O_Snps_Positions.txt --recode vcf --out O_Snps_chr9_1kgp_high_coverage</pre>
+<pre>plink1.9 --vcf /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz 
+--extract O_Snps_Positions.txt --recode vcf --out O_Snps_chr9_1kgp_high_coverage</pre>
 
 __3/20/2023 The First Roadblock__
 
@@ -127,7 +132,9 @@ Now that Andrew had the filtered VCF file he tried running LDBlock and at first 
 <span style="color:darkgreen">
     Take a vcf and a txt files as input, looks at a certain region, labels the snps from the txt document, reduces the MAF to 0.0001, outputs a LD Plot as a PDF
     </span>
-<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/O_Snps_chr9_1kgp_high_coverage.vcf.gz -OutPut /Data/home/ajklein/LDBlock_V3 -Region 9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/O_Snps_Positions.txt -InGFF /Data/home/ajklein/ABOGene.GFF3</pre>
+<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/O_Snps_chr9_1kgp_high_coverage.vcf.gz 
+-OutPut /Data/home/ajklein/LDBlock_V3 -Region 9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/O_Snps_Positions.txt 
+-InGFF /Data/home/ajklein/ABOGene.GFF3</pre>
 
 
 After adding this command Andrew was able to get one of the missing SNPs to show.
@@ -139,7 +146,8 @@ __3/23/2023 The B SNPs__
 In the meantime, he began to do the same thing for the B SNPs.
 
 <pre>plink1.9 --vcf /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz --extract B_Snps_Positions_Plink.txt --recode vcf --out B_Snps_chr9_1kgp_high_coverage</pre>
-<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz -OutPut /Data/home/ajklein/B_LDBlock_1 -Region chr9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/B_Snps_Positions.txt -InGFF /Data/home/ajklein/ABOGene.GFF3</pre>
+<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz 
+-OutPut /Data/home/ajklein/B_LDBlock_1 -Region chr9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/B_Snps_Positions.txt -InGFF /Data/home/ajklein/ABOGene.GFF3</pre>
 
 He did the same thing for B as he did for O. Luckily none of the B SNPs were indels so he did not have any issues with this set of SNPs.
 
@@ -150,7 +158,8 @@ While waiting for Kiana to figure out the indel Andrew took a week to work on sc
 <span style="color:darkgreen">
     Take a vcf and a txt files as input, looks at a certain region, labels the snps from the txt document, reduces MAF to 0.001, looks at the GFF file for exon and intron information, outputs a LD Plot as a PDF
     </span>
-<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/O_Files/o_snps_chr9_1kgp_high_coverage_recoded.vcf.gz -OutPut /Data/home/ajklein/O_Files/O_LDBlock -Region 9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/B_Snps_Positions.txt -MAF 0.0001 -InGFF /Data/home/ajklein/ABOGene.GFF</pre>
+<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/O_Files/o_snps_chr9_1kgp_high_coverage_recoded.vcf.gz 
+-OutPut /Data/home/ajklein/O_Files/O_LDBlock -Region 9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/B_Snps_Positions.txt -MAF 0.0001 -InGFF /Data/home/ajklein/ABOGene.GFF</pre>
 
 
 Andrew looked into the -InGFF argument and changed the ABOGene file to a GFF file and changing the file extention showed the exons in the resulting graph. Andrew also made two folders where he would separate the O and B files.
