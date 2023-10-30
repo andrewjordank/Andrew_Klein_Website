@@ -250,6 +250,3 @@ __This is how Andrew learned Python, command line, LDBlockShow, and Plink to gen
 For one of the O Snps in the EAS population (rs8176704), there is no data so the resulting LD Plot does not include this SNP. <br>
 LD Calculations were compared to the [LD Matrix tool](https://ldlink.nci.nih.gov/?tab=ldmatrix).<br> This also shows the missing data for this SNP within this population.<br>
 The LD calculations between the website and the program seem to be the same or similar in value.
-
-
-(https://github.com/andrewjordank/DSF_Fall2023/blob/main/Images/Floyd.jpg?raw=true)
