@@ -57,7 +57,7 @@ nav:
       Resume: Andrew Klein_CV (1).pdf
   - Projects:
       Introduction: intro.md
-      ABO Systematic Review: intro.md
+      ABO Systematic Review: formulating_LD_plots-Andrew_Klein.md
       Heparin Induced Thrombocytopenia: intro.md
   - Codebase: 
       Installation and Requirements: requirements.txt
