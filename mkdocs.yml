@@ -58,7 +58,7 @@ nav:
       ABO Systematic Review: intro.md
       Heparin Induced Thrombocytopenia: intro.md
   - Codebase: 
-      Installation and Requirements: installation.md
+      Installation and Requirements: requirements.txt
       User Manual: manual.md
   - Data Management Plan: Data_Management_Plan.md
 
