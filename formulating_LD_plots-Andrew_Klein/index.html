@@ -1,0 +1,1030 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Andrew Kleins website">
+      
+      
+        <meta name="author" content="Andrew Klein">
+      
+      
+        <link rel="canonical" href="https://github-andrewjordank.github.io/formulating_LD_plots-Andrew_Klein/">
+      
+      
+        <link rel="prev" href="../intro/">
+      
+      
+        <link rel="next" href="../filler/">
+      
+      
+      <link rel="icon" href="../material/cogs">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+    
+    
+      
+        <title>ABO Systematic Review - Andrew Klein Website</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRegular:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Regular"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="white">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#making-a-pairwise-ld-plot-using-ldblock-show" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Andrew Klein Website" class="md-header__button md-logo" aria-label="Andrew Klein Website" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.9 18.45c1.35 0 2.45-1.1 2.45-2.45s-1.1-2.45-2.45-2.45c-1.36 0-2.45 1.1-2.45 2.45s1.09 2.45 2.45 2.45m5.2-1.77 1.48 1.16c.13.11.17.29.08.45l-1.4 2.42a.35.35 0 0 1-.43.15l-1.74-.7c-.36.28-.76.51-1.18.69l-.27 1.85c-.02.17-.17.3-.34.3h-2.8c-.18 0-.32-.13-.35-.3l-.26-1.85c-.43-.18-.82-.41-1.18-.69l-1.75.7c-.15.06-.34 0-.42-.15l-1.4-2.42a.351.351 0 0 1 .08-.45l1.48-1.16-.05-.68.05-.69-1.48-1.15a.353.353 0 0 1-.08-.45l1.4-2.42c.08-.16.27-.22.42-.16l1.75.71c.36-.28.75-.52 1.18-.69l.26-1.86c.03-.16.17-.29.35-.29h2.8c.17 0 .32.13.34.29l.27 1.86c.42.17.82.41 1.18.69l1.74-.71c.17-.06.34 0 .43.16l1.4 2.42c.09.15.05.34-.08.45l-1.48 1.15.05.69-.05.68M6.69 8.07c.87 0 1.57-.7 1.57-1.57 0-.87-.7-1.58-1.57-1.58A1.58 1.58 0 0 0 5.11 6.5c0 .87.71 1.57 1.58 1.57m3.34-1.13.97.74c.07.07.09.19.03.29l-.9 1.56c-.05.1-.17.14-.27.1l-1.12-.45-.74.44-.19 1.19c-.02.11-.11.19-.22.19h-1.8c-.12 0-.21-.08-.23-.19L5.4 9.62l-.76-.44-1.14.45c-.09.04-.2 0-.26-.1l-.9-1.56c-.06-.1-.03-.22.05-.29l.95-.74-.03-.44.03-.44-.95-.74a.229.229 0 0 1-.05-.29l.9-1.56c.06-.1.17-.14.26-.1l1.13.45.77-.44.16-1.19c.02-.11.11-.19.23-.19h1.8c.11 0 .2.08.22.19L8 3.38l.74.44 1.12-.45c.1-.04.22 0 .27.1l.9 1.56c.06.1.04.22-.03.29l-.97.74.03.44-.03.44Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Andrew Klein Website
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ABO Systematic Review
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/andrewjordank/Andrew_Klein_Website" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Andrew_Klein_Website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../personal/" class="md-tabs__link">
+          
+  
+    
+  
+  About Me
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../intro/" class="md-tabs__link">
+          
+  
+    
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../requirements.txt" class="md-tabs__link">
+          
+  
+    
+  
+  Codebase
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../filler/" class="md-tabs__link">
+        
+  
+    
+  
+  Data Management Plan
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Andrew Klein Website" class="md-nav__button md-logo" aria-label="Andrew Klein Website" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.9 18.45c1.35 0 2.45-1.1 2.45-2.45s-1.1-2.45-2.45-2.45c-1.36 0-2.45 1.1-2.45 2.45s1.09 2.45 2.45 2.45m5.2-1.77 1.48 1.16c.13.11.17.29.08.45l-1.4 2.42a.35.35 0 0 1-.43.15l-1.74-.7c-.36.28-.76.51-1.18.69l-.27 1.85c-.02.17-.17.3-.34.3h-2.8c-.18 0-.32-.13-.35-.3l-.26-1.85c-.43-.18-.82-.41-1.18-.69l-1.75.7c-.15.06-.34 0-.42-.15l-1.4-2.42a.351.351 0 0 1 .08-.45l1.48-1.16-.05-.68.05-.69-1.48-1.15a.353.353 0 0 1-.08-.45l1.4-2.42c.08-.16.27-.22.42-.16l1.75.71c.36-.28.75-.52 1.18-.69l.26-1.86c.03-.16.17-.29.35-.29h2.8c.17 0 .32.13.34.29l.27 1.86c.42.17.82.41 1.18.69l1.74-.71c.17-.06.34 0 .43.16l1.4 2.42c.09.15.05.34-.08.45l-1.48 1.15.05.69-.05.68M6.69 8.07c.87 0 1.57-.7 1.57-1.57 0-.87-.7-1.58-1.57-1.58A1.58 1.58 0 0 0 5.11 6.5c0 .87.71 1.57 1.58 1.57m3.34-1.13.97.74c.07.07.09.19.03.29l-.9 1.56c-.05.1-.17.14-.27.1l-1.12-.45-.74.44-.19 1.19c-.02.11-.11.19-.22.19h-1.8c-.12 0-.21-.08-.23-.19L5.4 9.62l-.76-.44-1.14.45c-.09.04-.2 0-.26-.1l-.9-1.56c-.06-.1-.03-.22.05-.29l.95-.74-.03-.44.03-.44-.95-.74a.229.229 0 0 1-.05-.29l.9-1.56c.06-.1.17-.14.26-.1l1.13.45.77-.44.16-1.19c.02-.11.11-.19.23-.19h1.8c.11 0 .2.08.22.19L8 3.38l.74.44 1.12-.45c.1-.04.22 0 .27.1l.9 1.56c.06.1.04.22-.03.29l-.97.74.03.44-.03.44Z"/></svg>
+
+    </a>
+    Andrew Klein Website
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/andrewjordank/Andrew_Klein_Website" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Andrew_Klein_Website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About Me
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About Me
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personal Info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Andrew%20_Klein_CV.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ABO Systematic Review
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heparin Induced Thrombocytopenia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/projects/test.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test_2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Codebase
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Codebase
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements.txt" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation and Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Management Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="making-a-pairwise-ld-plot-using-ldblock-show">Making a Pairwise LD Plot Using LDBlock Show<a class="headerlink" href="#making-a-pairwise-ld-plot-using-ldblock-show" title="Permanent link">&para;</a></h1>
+<p><strong>Andrew Klein</strong>  <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#110;&#100;&#114;&#101;&#119;&#106;&#107;&#108;&#101;&#105;&#110;&#64;&#97;&#114;&#105;&#122;&#111;&#110;&#97;&#46;&#101;&#100;&#117;">&#97;&#110;&#100;&#114;&#101;&#119;&#106;&#107;&#108;&#101;&#105;&#110;&#64;&#97;&#114;&#105;&#122;&#111;&#110;&#97;&#46;&#101;&#100;&#117;</a></p>
+<p>Our goal is to create a pairwise LD plot of the SNPs used to determine ABO blood type alleles. These SNPs were identified during a systematic review and include both functional SNPs and tag SNPs. </p>
+<p>The O vs non-O SNPs include:
+* rs8176719
+* rs8176704
+* rs687289
+* rs657152
+* rs612169
+* rs8176645
+* rs505922
+* rs529565</p>
+<p>The A vs B SNPs include: 
+* rs8176749
+* rs8176747
+* rs8176746
+* rs8176743
+* rs8176741
+* rs7853989
+* rs8176722
+* rs8176720
+* rs8176672</p>
+<p>The documented code will be run on the Karnes Server and we are making the LD plots using the pangenomic 1000g file that can be found <a href="https://www.internationalgenome.org/data-portal/data-collection/30x-grch38">here</a>.
+This file will also contain the notes/thoughts that Andrew was thinking about while making these plots. You will see how he learned how to use PLINK, command line, and LDBlockShow as this file goes on</p>
+<h1 id="files-being-used">Files Being Used<a class="headerlink" href="#files-being-used" title="Permanent link">&para;</a></h1>
+<p>All of these files can be found on the Karnes Server under <strong>/Data/home/ajklein</strong> or <strong>/Data/home/ajklein/O_Files</strong> or <strong>/Data/home/ajklein/B_Files</strong>
+Original Pangenomic 1000Genome file is called <strong>1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz</strong><br>
+The final VCF files that are being used are:<br>
+<strong>o_snps_chr9_1kgp_high_coverage_recoded.vcf.gz</strong> <br>
+<strong>O_AMR.vcf</strong>  <strong>B_AMR.vcf</strong><br>
+<strong>O_AFR.vcf</strong>  <strong>B_AFR.vcf</strong><br>
+<strong>O_EUR.vcf</strong>  <strong>O_EUR.vcf</strong><br>
+<strong>O_EAS.vcf</strong>  <strong>O_EAS.vcf</strong><br>
+<strong>O_SAS.vcf</strong>  <strong>O_SAS.vcf</strong><br></p>
+<p>CSV file that contains all the data from the 1000 genomes individuals<br>
+<strong>1000G_2504_high_coverage.sequence.index.csv</strong> <br></p>
+<p>Later in this document, I will explain how these files are made</p>
+<h1 id="programs-being-used">Programs Being Used<a class="headerlink" href="#programs-being-used" title="Permanent link">&para;</a></h1>
+<p><strong>LDBlockShow</strong>(<a href="https://github.com/BGI-shenzhen/LDBlockShow">https://github.com/BGI-shenzhen/LDBlockShow</a>) is a fast and effective tool to generate linkage disequilibrium (LD) heatmap from VCF files. Here is the <a href="https://github.com/BGI-shenzhen/LDBlockShow">LDBlockShow GitHub</a> and the <a href="https://doi.org/10.1093/bib/bbaa227">LDBlockShow article</a>. <a href="https://github.com/hewm2008/LDBlockShow/blob/main/LDBlockShow_Manual_English.pdf">LDBLockShow Manual</a><br></p>
+<p>To call upon this program in the Karnes server use this command:<br>
+<strong>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow</strong><br>
+Now here are some other commands I will be using:<br>
+* <code>-InVCF</code>: the VCF input
+* <code>-OutPut</code>: the output file of LD blocks
+* <code>-Region</code>: the region to show the LD info in
+* <code>-OutPdf</code>: specifying to output as a PDF
+* <code>ShowNum</code>: shows the R2 values in each cell
+* <code>-SeleVar 2</code>: <code>1</code> specifies D prime calculations and <code>2</code> specifies r^2 calculation
+* <code>-SpeSNPName</code>: used to indicate the names for interested SNPs, these names will be shown in the heatmap.
+* <code>-MAF</code>: Minor allele frequency filter
+* <code>-InGFF</code>: the GFF3 input for genomic region annotation</p>
+<p><strong>ShowLDSVG</strong>(<a href="https://github.com/BGI-shenzhen/LDBlockShow">https://github.com/BGI-shenzhen/LDBlockShow</a>) This is a program included with LDBlockShow. This program is used to change the aesthetics of the plots that LDBlockShow generates. As of 4/6/2023 Andrew has attemtped to use this program but hasn't figured out everything yet. When he begins to tweak the plots this section may be updated. <br>
+To call upon this program in the Karnes server use this command:<br>
+<strong>/home/shared/tools/LDBlockShow-1.40/bin/ShowLDSVG</strong><br>
+* <code>-InPreFix</code>: The output of LD Block Show (it will grab the correct file type you just need to put in the correct directory)
+* <code>-OutPut</code>: Used to name the output file and choose where it goes
+* <code>-OutPdf</code>: specifying to output as a PDF
+* <code>ShowNum</code>: shows the R2 values in each cell</p>
+<p><strong>PLINK 1.90 beta</strong> (<a href="https://www.cog-genomics.org/plink/">https://www.cog-genomics.org/plink/</a>) Plink is a program that allows users to view, edit, and organize multiple types of files. Developed by Christopher Chang with support from the NIH-NIDDK's Laboratory of Biological Modeling, the Purcell Lab, and others. </p>
+<p>To call upon this program in the Karnes server use this command:<br>
+<strong>plink1.9</strong><br>
+Here are some arguments I will be using:&lt;br"
+* <code>--vcf</code>: Inputs the VCF file
+* <code>--extract</code>: Extracts SNPs based on a txt file that tells PLINK the positions of the SNPs
+* <code>--recode vcf</code>: changes the output to a vcf file
+* <code>--out</code>: tells the program where to put the output files
+* <code>--keep</code>: Accepts a txt file that contains the SAMPLE_ID's if individuals and removes everyone else
+* <code>--make-bed</code>: I don't know why I need this argument but the program tells you to add it in and it didn't work without it
+* <code>--double-id</code>: Allows PLINK to ignore any _ in the txt file (Shout out to Christopher Chang for this tip)</p>
+<p><strong>3/14/2023</strong>    <strong>Andrew's First Attempt</strong></p>
+<p>This was the first time Andrew attempted to use LDBlock Show. This is the code he used:</p>
+<p><span style="color:darkgreen"> Takes a vcf as input, look at a certain region, produces a PNG LD Plot </span></p>
+<pre> /home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz
+-OutPut /Data/home/ajklein/LDBlock -Region chr9:133247534-133278152 -OutPng -ShowNum -SeleVar 2 </pre>
+
+<p>He didn't know how to output the graph as a PDF yet but this first attempt showed every SNP in the region that he provied in the code. While this was not even close to what he wanted to do he was able to use the program.\
+He did some more research and added some more arguments to his code:</p>
+<p><span style="color:darkgreen"> Take a vcf and a txt files as input, looks at a certain region, label the snps from the txt document, outputs a LD Plot as a PDF </span></p>
+<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz 
+-OutPut /Data/home/ajklein/LDBlock_FULL -Region chr9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/O_Snps_Positions.txt -InGFF /Data/home/ajklein/ABOGene.GFF3</pre>
+
+<p>Now he was able to output the graphs as a PDF, label the SNPs he was interested in and tried to use a GFF3 file to show exons and label the gene name. But the -InGFF argument was not working for him at this time.</p>
+<p><strong>3/15/2023 Andrew Tries Again</strong></p>
+<p>At this point, Andrew was trying to think of a way to only calculate the SNPs he was interested in. He had ideas about how to do this but he went straight to the source by asking the creator of the program on GitHub. The creator seemed to be active with ~3 day response time. While waiting for a response he continued to learn command line. He learned how to use the "grep" and "zcat" command to find what SNPs are in a VCF file. He was then introduced to PLINK. He will use PLINK to extract the B and O SNPs that he cares about. </p>
+<p>First, he used zcat and the grep command to look through the vcf file to figure out how the SNPs he cared about are named. He used genome browser to obtain the position of each SNP and used this position to look for each SNP in the VCF file.</p>
+<pre>zcat 1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz | grep "133274084"</pre>
+
+<p>He repeated this command for each SNP and this revealed that his SNPs were documented as <strong>"9:133266790:C:A"</strong>. He had to copy these locations into a txt file so he can use PLINK to extract these specific SNPs
+Now that he had all the positions of the SNPs he had to format the txt file in a specific way. One line of this txt file looked like this:</p>
+<p><strong>chr9  133256205   133256205   9:133256205:G:C</strong></p>
+<p>This will tell PLINK what SNPs to extract. He was then able to run this code:</p>
+<p><span style="color:darkgreen">
+Creates a new VCF file that only contains the O SNPs
+    </span></p>
+<pre>plink1.9 --vcf /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz 
+--extract O_Snps_Positions.txt --recode vcf --out O_Snps_chr9_1kgp_high_coverage</pre>
+
+<p><strong>3/20/2023 The First Roadblock</strong></p>
+<p>Now that Andrew had the filtered VCF file he tried running LDBlock and at first it looked like it created an LD plot of just the O snps but after a careful look the SNPs were not labeled and there was 7 SNPs not 9. He asked the creator of the program on GitHub why the labels were not showing up. It turns out when the filtered VCF was created chromosome 9 was no longer labeled as chr9, it was now labeled 9. Using nano to adjust the txt file for LDBlock show the labels began to show up. The next issue was getting all of the SNPs to show. The creator introduced Andrew to the -MAF command.</p>
+<p><span style="color:darkgreen">
+    Take a vcf and a txt files as input, looks at a certain region, labels the snps from the txt document, reduces the MAF to 0.0001, outputs a LD Plot as a PDF
+    </span></p>
+<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/O_Snps_chr9_1kgp_high_coverage.vcf.gz 
+-OutPut /Data/home/ajklein/LDBlock_V3 -Region 9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/O_Snps_Positions.txt 
+-InGFF /Data/home/ajklein/ABOGene.GFF3</pre>
+
+<p>After adding this command Andrew was able to get one of the missing SNPs to show.</p>
+<p>After looking at the log from LDBlock show Andrew realized the reason the last SNP wasn't showing up. This last SNP was an indel, indels notoriously have issues in these types of programs. He explained the issue to Kiana who was able to brute force recode this indel. (She created a markdown file of how she did this.) Once Kiana was able to do this, Andrew could continue his journey.</p>
+<p><strong>3/23/2023 The B SNPs</strong></p>
+<p>In the meantime, he began to do the same thing for the B SNPs.</p>
+<pre>plink1.9 --vcf /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz --extract B_Snps_Positions_Plink.txt --recode vcf --out B_Snps_chr9_1kgp_high_coverage</pre>
+<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/1kGP_high_coverage_Illumina.chr9.filtered.SNV_INDEL_SV_phased_panel.vcf.gz 
+-OutPut /Data/home/ajklein/B_LDBlock_1 -Region chr9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/B_Snps_Positions.txt -InGFF /Data/home/ajklein/ABOGene.GFF3</pre>
+
+<p>He did the same thing for B as he did for O. Luckily none of the B SNPs were indels so he did not have any issues with this set of SNPs.</p>
+<p><strong>4/3/23 Return to the O SNPs</strong></p>
+<p>While waiting for Kiana to figure out the indel Andrew took a week to work on school and try scientific writing for the first time. As referenced before Kiana was able to fix the indel issue. After Andrew received the new recoded vcf file we was able to fix the graph.</p>
+<p><span style="color:darkgreen">
+    Take a vcf and a txt files as input, looks at a certain region, labels the snps from the txt document, reduces MAF to 0.001, looks at the GFF file for exon and intron information, outputs a LD Plot as a PDF
+    </span></p>
+<pre>/home/shared/tools/LDBlockShow-1.40/bin/LDBlockShow -InVCF /Data/home/ajklein/O_Files/o_snps_chr9_1kgp_high_coverage_recoded.vcf.gz 
+-OutPut /Data/home/ajklein/O_Files/O_LDBlock -Region 9:133247534-133278152 -OutPdf -ShowNum -SeleVar 2 -SpeSNPName /Data/home/ajklein/B_Snps_Positions.txt -MAF 0.0001 -InGFF /Data/home/ajklein/ABOGene.GFF</pre>
+
+<p>Andrew looked into the -InGFF argument and changed the ABOGene file to a GFF file and changing the file extention showed the exons in the resulting graph. Andrew also made two folders where he would separate the O and B files.</p>
+<p>After completing two LD Block graphs for the O and B SNPs he was told to make more of these plots but for the 5 Populations (AMR, AFR, EUR, EAS, and SAS).</p>
+<p>Before we move on there is another program that comes with LDBlock Show and this program is <strong>ShowLDSVF</strong> which Andrew will use in the future to tweak the aesthetics of the LD Plots.</p>
+<p><strong>&#8536;/2023 Population Specifc LD Plots</strong></p>
+<p>In order to make population specific LD Plots here's what Andrew needed to do:<br>
+* 1 Extract population Sample IDs from a vcf file
+* 2 Create a txt file for each population that Pink will use to extract individuals
+* 3 Use Plink to make 10 new vcf files (5 populations, 2 blood types)
+* 4 Use these new vcf files in LDBlockShow to generate 10 new LD Plots<br></p>
+<p>Kiana gave Andrew a large csv file containing the ID data from the individuals from the 1000 genome data.<br>
+<strong>1000G_2504_high_coverage.sequence.index.csv</strong></p>
+<p>For some reason in the original 1000 genomes vcf file the way the individuals are identified looks like this:<br>
+<strong>HG03063_HG03063</strong></p>
+<p>And in order to get plink to extract these individuals from the vcf file the --keep argument in Plink needs to look like this:<br>
+<strong>HG03063_HG03063</strong> &emsp; <strong>HG03063_HG03063</strong> <br></p>
+<p>Here is the code that Andrew wrote to categorize the sub populations into the continental populations: (he originally named this csv as "gamers")</p>
+<p><span style="color:darkgreen">
+    This creates a new column named "Continent" and sorts individuals into their continental population
+    </span></p>
+<pre>list =["GIH", "PJL", "BEB", "STU", "ITU", "SAS"] 
+for i in list:
+    gamers.loc[gamers['POPULATION'] == i, "Continent"] = "SAS"
+list = ["CEU","TSI", "FIN", "GBR", "IBS", "EUR"]
+for i in list:
+    gamers.loc[gamers['POPULATION'] == i, "Continent"] ="EUR"
+list = ["CHB", "JPT", "CHS", "CDX","KHV", "EAS"]
+for i in list:
+    gamers.loc[gamers['POPULATION'] == i, "Continent"] ="EAS"
+list = ["MXL", "PUR", "CLM","PEL", "AMR"]
+for i in list:
+    gamers.loc[gamers['POPULATION'] == i, "Continent"] ="AMR"
+list = ["YRI", 'LWK', "GWD", "MSL", "ESN", "ASW", 'ACB', "AFR"]
+for i in list:
+    gamers.loc[gamers['POPULATION'] == i, "Continent"] ="AFR"</pre>
+
+<p><span style="color:darkgreen">
+    Sorts the csv file via the "Continent" column
+    </span></p>
+<pre>csv.arrange= gamers.sort_values(by="Continent", ascending=True)
+csv.arrange.reset_index(drop=True,inplace=True)
+csv.arrange</pre>
+
+<p><span style="color:darkgreen">
+Creates a new column called "FAMILY_ID" which is in the format that plink needs.
+</span></p>
+<pre>csv.arrange["FAMILY_ID"] = csv.arrange["SAMPLE_NAME"] + '_'+csv.arrange["SAMPLE_NAME"]
+csv.arrange</pre>
+
+<p>Andrew didn't know how to delete all the columns that he didn't need so he just deleted them from the csv file manually only leaving the columns he needed. (SAMPLE_NAME, Population, Continent, and FAMILY_ID).<br></p>
+<p>Now he wrote some code to create a txt file that he can use in plink</p>
+<p><span style="color:darkgreen">
+This will create a new txt file, look through the "Continent" column looking for "AMR" and when ever there is "AMR" write the Family_ID tabspace Family_ID newline into the txt file.</span></p>
+<pre>AMR = open("amr.txt", "w") 
+for i in range(len(csv)):
+    row= csv.iloc[i]
+    if row["Continent"] == "AMR":
+        print(row["FAMILY_ID"])
+        AMR.write(row["FAMILY_ID"] + "\t" +row['FAMILY_ID']+ "\n")
+AMR.close()</pre>
+
+<p>Andrew did this for the 5 populations. Resulting in 5 txt files.<br>
+Now he could use them in Plink.</p>
+<p><span style="color:darkgreen">
+The input is a vcf file and a txt file. This will only keep the individuals that are in the txt file. It will then output a new vcf that only contains the individuals of interest.</span></p>
+<pre> plink1.9 --vcf /Data/home/ajklein/B_Files/B_Snps_chr9_1kgp_high_coverage.vcf --keep /Data/home/ajklein/amr.txt --out B_AMR --make-bed --double-id --recode vcf</pre>
+
+<p>This is an example of how to make one of the population LD plots reflect the color of the population we're choosing for our paper:</p>
+<p><span style="color:darkgreen">
+This will result in a LD plot that has a color gradient that reflects the color of the population</span></p>
+<pre>/home/shared/tools/LDBlockShow-1.40/bin/ShowLDSVG -InPreFix /Data/home/ajklein/O_Files/O_AFR_LDBlock -OutPut /Data/home/ajklein/help.svg -SpeSNPName /Data/home/ajklein/O_Files/O_Snps_Positions.txt -crMiddle 217,160,182 -crEnd 220,57,119 -crTagSNP 0,0,0 -NumGradien 100 -ShowNum</pre>
+
+<p><strong>This is how Andrew learned Python, command line, LDBlockShow, and Plink to generate multiple LD Plots!!</strong></p>
+<p><strong>Known Issues</strong><br>
+For one of the O Snps in the EAS population (rs8176704), there is no data so the resulting LD Plot does not include this SNP. <br>
+LD Calculations were compared to the <a href="https://ldlink.nci.nih.gov/?tab=ldmatrix">LD Matrix tool</a>.<br> This also shows the missing data for this SNP within this population.<br>
+The LD calculations between the website and the program seem to be the same or similar in value.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      2023-11-08
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2024 Andrew Klein
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      
+    
+  </body>
+</html>
