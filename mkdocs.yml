@@ -7,8 +7,6 @@ site_url: https://github-andrewjordank.github.io/
 repo_name: Andrew_Klein_Website
 repo_url: https://github.com/andrewjordank/Andrew_Klein_Website
 edit_uri: edit/main/docs/
-                        /Projects/
-                        /Figures/
 
 # Copyright
 copyright: 'Copyright &copy; 2023 - 2024 Andrew Klein'
@@ -59,6 +57,8 @@ nav:
       Introduction: intro.md
       ABO Systematic Review: docs/projects/making_LD_plot.md
       Heparin Induced Thrombocytopenia: filler.md
+      Test: docs/projects/test.md
+      Test_2: test.md
   - Codebase: 
       Installation and Requirements: requirements.txt
       User Manual: filler.md
